@@ -124,3 +124,149 @@ var isHappy = function (n, seen) {
 // Hint #1 : In-place means we should not be allocating any space for extra array. But we are allowed to modify the existing array. However, as a first step, try coming up with a solution that makes use of additional space. For this problem as well, first apply the idea discussed using an additional array and the in-place solution will pop up eventually.
 
 // Hint #2 : A two-pointer approach could be helpful here. The idea would be to have one pointer for iterating the array and another pointer that just works on the non-zero elements of the array.
+
+
+//Group Anagrams 
+// Given an array of strings, group anagrams together.
+
+// Example:
+
+// Input: ["eat", "tea", "tan", "ate", "nat", "bat"],
+// Output:
+// [
+//   ["ate","eat","tea"],
+//   ["nat","tan"],
+//   ["bat"]
+// ]
+// Note:
+
+// All inputs will be in lowercase.
+// The order of your output does not matter.
+
+
+//Middle of a Linked List
+// Given a non-empty, singly linked list with head node head, return a middle node of linked list.
+
+// If there are two middle nodes, return the second middle node.
+
+ 
+
+// Example 1:
+
+// Input: [1,2,3,4,5]
+// Output: Node 3 from this list (Serialization: [3,4,5])
+// The returned node has value 3.  (The judge's serialization of this node is [3,4,5]).
+// Note that we returned a ListNode object ans, such that:
+// ans.val = 3, ans.next.val = 4, ans.next.next.val = 5, and ans.next.next.next = NULL.
+// Example 2:
+
+// Input: [1,2,3,4,5,6]
+// Output: Node 4 from this list (Serialization: [4,5,6])
+// Since the list has two middle nodes with values 3 and 4, we return the second one.
+ 
+
+// Note:
+
+// The number of nodes in the given list will be between 1 and 100.
+
+
+//Min Stack 
+// Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
+
+// push(x) -- Push element x onto stack.
+// pop() -- Removes the element on top of the stack.
+// top() -- Get the top element.
+// getMin() -- Retrieve the minimum element in the stack.
+ 
+
+// Example 1:
+
+// Input
+// ["MinStack","push","push","push","getMin","pop","top","getMin"]
+// [[],[-2],[0],[-3],[],[],[],[]]
+
+// Output
+// [null,null,null,null,-3,null,0,-2]
+
+// Explanation
+// MinStack minStack = new MinStack();
+// minStack.push(-2);
+// minStack.push(0);
+// minStack.push(-3);
+// minStack.getMin(); // return -3
+// minStack.pop();
+// minStack.top();    // return 0
+// minStack.getMin(); // return -2
+ 
+
+// Constraints:
+
+// Methods pop, top and getMin operations will always be called on non-empty stacks.
+
+// Hint #1 : Consider each node in the stack having a minimum value. (Credits to @aakarshmadhavan)
+
+
+//Lost Stone Weight
+// We have a collection of stones, each stone has a positive integer weight.
+
+// Each turn, we choose the two heaviest stones and smash them together.  Suppose the stones have weights x and y with x <= y.  The result of this smash is:
+
+// If x == y, both stones are totally destroyed;
+// If x != y, the stone of weight x is totally destroyed, and the stone of weight y has new weight y-x.
+// At the end, there is at most 1 stone left.  Return the weight of this stone (or 0 if there are no stones left.)
+
+ 
+
+// Example 1:
+
+// Input: [2,7,4,1,8,1]
+// Output: 1
+// Explanation: 
+// We combine 7 and 8 to get 1 so the array converts to [2,4,1,1,1] then,
+// we combine 2 and 4 to get 2 so the array converts to [2,1,1,1] then,
+// we combine 2 and 1 to get 1 so the array converts to [1,1,1] then,
+// we combine 1 and 1 to get 0 so the array converts to [1] then that's the value of last stone.
+ 
+
+// Note:
+
+// 1 <= stones.length <= 30
+// 1 <= stones[i] <= 1000
+
+// Hint #1 : Simulate the process. We can do it with a heap, or by sorting some list of stones every time we take a turn.
+
+
+//  Product of Array Except Self
+//Given an array nums of n integers where n > 1,  return an array output such that output[i] is equal to the product of all the elements of nums except nums[i].
+
+// Example:
+
+// Input:  [1,2,3,4]
+// Output: [24,12,8,6]
+// Constraint: It's guaranteed that the product of the elements of any prefix or suffix of the array (including the whole array) fits in a 32 bit integer.
+
+// Note: Please solve it without division and in O(n).
+
+// Follow up:
+// Could you solve it with constant space complexity? (The output array does not count as extra space for the purpose of space complexity analysis.)
+
+
+//  Valid Parenthesis String
+// Given a string containing only three types of characters: '(', ')' and '*', write a function to check whether this string is valid. We define the validity of a string by these rules:
+
+// Any left parenthesis '(' must have a corresponding right parenthesis ')'.
+// Any right parenthesis ')' must have a corresponding left parenthesis '('.
+// Left parenthesis '(' must go before the corresponding right parenthesis ')'.
+// '*' could be treated as a single right parenthesis ')' or a single left parenthesis '(' or an empty string.
+// An empty string is also valid.
+// Example 1:
+// Input: "()"
+// Output: True
+// Example 2:
+// Input: "(*)"
+// Output: True
+// Example 3:
+// Input: "(*))"
+// Output: True
+// Note:
+// The string size will be in the range [1, 100].
