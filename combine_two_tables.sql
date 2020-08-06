@@ -1,4 +1,4 @@
-# Write your MySQL query statement below
+-- Write your MySQL query statement below
 -- 175. Combine Two Tables
 -- Easy
 -- SQL Schema

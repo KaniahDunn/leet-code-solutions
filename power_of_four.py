@@ -18,5 +18,5 @@ class Solution:
         while (num != 1):
             if (num % 4 != 0): 
                 return False
-            num = num // 4
+            num = num
         return True
